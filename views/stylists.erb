@@ -1,0 +1,12 @@
+<% if @stylists.any?() %>
+  <p>Stylists in the Salon:</p>
+
+  <ul>
+    <% @stylists.each do |stylist| %>
+      <li><a href="/stylists/<%= stylist.id() %>"><%= stylist.name() %></a></li>
+    <% end %>
+  </ul>
+  
+<% else %>
+  <p>There are no lists yet!</p>
+<% end %>
